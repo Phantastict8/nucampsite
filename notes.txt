@@ -1,5 +1,11 @@
-sdf
-sdff
-sdffs
-df
-sd
+How to put code to github
+
+
+click under the magnify glass
+plus sign
+add message 
+check mark
+push (in the 3 dots)
+
+
+-don't put code IF it's not working*****
