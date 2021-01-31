@@ -8,7 +8,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            campsites: CAMPSITES
+            campsites: CAMPSITES,
         };
     }
   render() {
@@ -25,4 +25,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App; 
