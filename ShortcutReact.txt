@@ -1,0 +1,48 @@
+                    rcc
+
+import React, { Component } from 'react'
+
+class WhateverYouWant extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
+}
+
+export default WhateverYouWant
+
+**************************************
+
+                    rfc
+
+import React from 'react'
+
+function WhateverYouWant() {
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+
+export default WhateverYouWant
+
+***************************************************
+
+                    rfce
+
+import React from 'react'
+
+function WhateverYouWant() {
+    return (
+        <div>
+            
+        </div>
+    )
+}
+
+export default WhateverYouWant
