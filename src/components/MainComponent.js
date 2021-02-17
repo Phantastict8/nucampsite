@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Directory from "./DirectoryComponent";
-import CampsiteInfo from "./CampsiteInfoComponents";
+import CampsiteInfo from "./CampsiteInfoComponent";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
