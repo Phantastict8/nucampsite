@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import {Nav, Navbar,
+import {
+    Nav,
+    Navbar,
     NavbarBrand,
     NavbarToggler,
     Collapse,
@@ -21,7 +23,7 @@ class Header extends Component {
         super(props);
         this.state = {
             isNavOpen: false,
-            isModalOpen: false
+            isModalOpen: false,
         };
         this.toggleNav = this.toggleNav.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
@@ -30,18 +32,20 @@ class Header extends Component {
 
     toggleNav() {
         this.setState({
-            isNavOpen: !this.state.isNavOpen
+            isNavOpen: !this.state.isNavOpen,
         });
     }
 
     toggleModal() {
         this.setState({
-            isModalOpen: !this.state.isModalOpen
+            isModalOpen: !this.state.isModalOpen,
         });
     }
 
     handleLogin(event) {
-        alert(`Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`);
+        alert(
+            `Username: ${this.username.value} Password: ${this.password.value} Remember: ${this.remember.checked}`
+        );
         this.toggleModal();
         event.preventDefault();
     }
@@ -62,7 +66,8 @@ class Header extends Component {
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
                         <NavbarBrand className="mr-auto" href="/">
-                            <img src="/assets/images/logo.png"
+                            <img
+                                src="/assets/images/logo.png"
                                 height="30"
                                 width="30"
                                 alt="NuCamp logo"
@@ -79,8 +84,7 @@ class Header extends Component {
                                 <NavItem>
                                     <NavLink
                                         className="nav-link"
-                                        to="/directory"
-                                    >
+                                        to="/directory">
                                         <i className="fa fa-list fa-lg" />{" "}
                                         Directory
                                     </NavLink>
@@ -93,8 +97,7 @@ class Header extends Component {
                                 <NavItem>
                                     <NavLink
                                         className="nav-link"
-                                        to="/contactus"
-                                    >
+                                        to="/contactus">
                                         <i className="fa fa-address-card fa-lg" />{" "}
                                         Contact Us
                                     </NavLink>
@@ -109,25 +112,52 @@ class Header extends Component {
                     </div>
                 </Navbar>
 
-                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                <Modal
+                    isOpen={this.state.isModalOpen}
+                    toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>
                         <Form onSubmit={this.handleLogin}>
                             <FormGroup>
                                 <Label htmlfor="username">Username</Label>
-                                <Input type="text" id="username" name="username" innerRef={input => this.username = input} />
+                                <Input
+                                    type="text"
+                                    id="username"
+                                    name="username"
+                                    innerRef={(input) =>
+                                        (this.username = input)
+                                    }
+                                />
                             </FormGroup>
                             <FormGroup>
                                 <Label htmlfor="password">Password</Label>
-                                <Input type="password" id="password" name="password" innerRef={input => this.password = input}/>
+                                <Input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    innerRef={(input) =>
+                                        (this.password = input)
+                                    }
+                                />
                             </FormGroup>
                             <FormGroup check>
                                 <Label check>
-                                    <Input type="checkbox" name="remember" innerRef={input => this.remember = input}/>
+                                    <Input
+                                        type="checkbox"
+                                        name="remember"
+                                        innerRef={(input) =>
+                                            (this.remember = input)
+                                        }
+                                    />
                                     Remember me
                                 </Label>
                             </FormGroup>
-                            <Button type="submit" value="submit" color="primary">Login</Button>
+                            <Button
+                                type="submit"
+                                value="submit"
+                                color="primary">
+                                Login
+                            </Button>
                         </Form>
                     </ModalBody>
                 </Modal>
